@@ -10,6 +10,8 @@ import SwiftUI
 
 
 struct StoriesView: View {
+    @State var openStories: Bool = false
+    
     var body: some View {
         ZStack {
             
@@ -20,16 +22,22 @@ struct StoriesView: View {
                 .scaledToFit()
                 .padding(.horizontal, 20)
                 .clipShape(Circle())
-            
-            Image ("UserPhoto")
-                .resizable()
-                .frame(width: 66.0, height: 66)
-                .clipped()
-                .scaledToFit()
-                .padding(.horizontal, 20)
-                .clipShape(Circle())
+            Button {
+                openStories.toggle()
+            } label: {
+                Image("UserPhoto")
+                    .resizable()
+                    .frame(width: 66.0, height: 66)
+                    .clipped()
+                    .scaledToFit()
+                    .padding(.horizontal, 20)
+                    .clipShape(Circle())
+            }
+            .sheet(isPresented: $openStories) {
+                StoriesActionSheet()
+            }
         }
-        .frame(width: 66.0, height: 66)
+        .frame(width: 80.0, height: 80)
     }
 }
 

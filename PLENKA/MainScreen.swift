@@ -9,6 +9,9 @@ import SwiftUI
 
 struct MainScreen: View {
     @State private var isShowPhotoLibrary = false
+    @State private var likeTap = false
+    
+    
     var photos: [String] = ["UserPhoto"]
     
     var body: some View {
@@ -31,12 +34,20 @@ struct MainScreen: View {
                 }
                 .padding(.top, 25)
                 
-                HStack(spacing: 10) {
-                    StoriesView()
-                    StoriesView()
-                    StoriesView()
+                ScrollView(.horizontal) {
+                    HStack(spacing: 10) {
+                        StoriesView()
+                        StoriesView()
+                        StoriesView()
+                        StoriesView()
+                        StoriesView()
+                    }
                 }
-                .padding(.trailing, 170)
+                .scrollIndicators(.hidden)
+                Divider()
+                    .background(Color.black)
+                    .padding(.top, 10)
+                    
                 HStack {
                     Image("UserPhoto")
                         .resizable()
@@ -67,9 +78,10 @@ struct MainScreen: View {
                 }
                 HStack {
                     Button(action: {
+                        likeTap.toggle()
                         print("Like")
                     }) {
-                        Image("IconLike")
+                        Image(likeTap ? "IconLikeColor" : "IconLike")
                             .resizable()
                             .frame(width: 35.0, height: 35.5)
                     }
