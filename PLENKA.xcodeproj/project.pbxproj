@@ -7,22 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE159A852A5DA36800B44A0A /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE159A842A5DA36800B44A0A /* StoriesView.swift */; };
 		CE93031A2A48A89E000FDA26 /* PLENKAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9303192A48A89E000FDA26 /* PLENKAApp.swift */; };
-		CE93031C2A48A89E000FDA26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93031B2A48A89E000FDA26 /* ContentView.swift */; };
+		CE93031C2A48A89E000FDA26 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93031B2A48A89E000FDA26 /* MainScreen.swift */; };
 		CE93031E2A48A8A0000FDA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE93031D2A48A8A0000FDA26 /* Assets.xcassets */; };
 		CE9303212A48A8A0000FDA26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9303202A48A8A0000FDA26 /* Preview Assets.xcassets */; };
 		CE9303232A48A8A0000FDA26 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9303222A48A8A0000FDA26 /* Persistence.swift */; };
 		CE9303262A48A8A0000FDA26 /* PLENKA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE9303242A48A8A0000FDA26 /* PLENKA.xcdatamodeld */; };
+		CE93F9682A4A2DFE002F3E55 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F9672A4A2DFE002F3E55 /* ImagePicker.swift */; };
+		CE93F97D2A4B1422002F3E55 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F97C2A4B1422002F3E55 /* CircleImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE159A842A5DA36800B44A0A /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
 		CE9303162A48A89E000FDA26 /* PLENKA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLENKA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9303192A48A89E000FDA26 /* PLENKAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLENKAApp.swift; sourceTree = "<group>"; };
-		CE93031B2A48A89E000FDA26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE93031B2A48A89E000FDA26 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		CE93031D2A48A8A0000FDA26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9303202A48A8A0000FDA26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE9303222A48A8A0000FDA26 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		CE9303252A48A8A0000FDA26 /* PLENKA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PLENKA.xcdatamodel; sourceTree = "<group>"; };
+		CE93F9672A4A2DFE002F3E55 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		CE93F97C2A4B1422002F3E55 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +62,14 @@
 			isa = PBXGroup;
 			children = (
 				CE9303192A48A89E000FDA26 /* PLENKAApp.swift */,
-				CE93031B2A48A89E000FDA26 /* ContentView.swift */,
-				CE93031D2A48A8A0000FDA26 /* Assets.xcassets */,
+				CE93031B2A48A89E000FDA26 /* MainScreen.swift */,
 				CE9303222A48A8A0000FDA26 /* Persistence.swift */,
+				CE93031D2A48A8A0000FDA26 /* Assets.xcassets */,
 				CE9303242A48A8A0000FDA26 /* PLENKA.xcdatamodeld */,
 				CE93031F2A48A8A0000FDA26 /* Preview Content */,
+				CE93F9672A4A2DFE002F3E55 /* ImagePicker.swift */,
+				CE93F97C2A4B1422002F3E55 /* CircleImageView.swift */,
+				CE159A842A5DA36800B44A0A /* StoriesView.swift */,
 			);
 			path = PLENKA;
 			sourceTree = "<group>";
@@ -144,8 +153,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9303232A48A8A0000FDA26 /* Persistence.swift in Sources */,
-				CE93031C2A48A89E000FDA26 /* ContentView.swift in Sources */,
+				CE93031C2A48A89E000FDA26 /* MainScreen.swift in Sources */,
+				CE93F9682A4A2DFE002F3E55 /* ImagePicker.swift in Sources */,
+				CE159A852A5DA36800B44A0A /* StoriesView.swift in Sources */,
 				CE9303262A48A8A0000FDA26 /* PLENKA.xcdatamodeld in Sources */,
+				CE93F97D2A4B1422002F3E55 /* CircleImageView.swift in Sources */,
 				CE93031A2A48A89E000FDA26 /* PLENKAApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
