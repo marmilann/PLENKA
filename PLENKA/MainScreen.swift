@@ -35,7 +35,9 @@ struct MainScreen: View {
                 .padding(.top, 25)
                 
                 ScrollView(.horizontal) {
-                    HStack(spacing: 10) {
+                    HStack(spacing: -5) {
+                        StoriesView()
+                        StoriesView()
                         StoriesView()
                         StoriesView()
                         StoriesView()
@@ -46,7 +48,7 @@ struct MainScreen: View {
                 .scrollIndicators(.hidden)
                 Divider()
                     .background(Color.black)
-                    .padding(.top, 10)
+                    .padding(.top, 5)
                     
                 HStack {
                     Image("UserPhoto")

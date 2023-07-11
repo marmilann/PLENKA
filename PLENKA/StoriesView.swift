@@ -17,7 +17,7 @@ struct StoriesView: View {
             
             Image ("InstaColor")
                 .resizable()
-                .frame(width: 71, height: 71)
+                .frame(width: 76, height: 76)
                 .clipped()
                 .scaledToFit()
                 .padding(.horizontal, 20)
@@ -27,7 +27,7 @@ struct StoriesView: View {
             } label: {
                 Image("UserPhoto")
                     .resizable()
-                    .frame(width: 66.0, height: 66)
+                    .frame(width: 70.0, height: 70)
                     .clipped()
                     .scaledToFit()
                     .padding(.horizontal, 20)
@@ -37,7 +37,7 @@ struct StoriesView: View {
                 StoriesActionSheet()
             }
         }
-        .frame(width: 80.0, height: 80)
+        .frame(width: 90.0, height: 90)
     }
 }
 
