@@ -17,6 +17,9 @@
 		CE9303262A48A8A0000FDA26 /* PLENKA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE9303242A48A8A0000FDA26 /* PLENKA.xcdatamodeld */; };
 		CE93F9682A4A2DFE002F3E55 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F9672A4A2DFE002F3E55 /* ImagePicker.swift */; };
 		CE93F97D2A4B1422002F3E55 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F97C2A4B1422002F3E55 /* CircleImageView.swift */; };
+		CED759212A5EE4BA0051B3F6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED759202A5EE4BA0051B3F6 /* ProfileView.swift */; };
+		CED759232A5EE4D70051B3F6 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED759222A5EE4D70051B3F6 /* Main.swift */; };
+		CED759262A5EE6A50051B3F6 /* Crystal_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED759252A5EE6A50051B3F6 /* Crystal_Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,10 @@
 		CE9303252A48A8A0000FDA26 /* PLENKA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PLENKA.xcdatamodel; sourceTree = "<group>"; };
 		CE93F9672A4A2DFE002F3E55 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CE93F97C2A4B1422002F3E55 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		CED759202A5EE4BA0051B3F6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CED759222A5EE4D70051B3F6 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		CED759252A5EE6A50051B3F6 /* Crystal_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Crystal_Regular.ttf; path = ../../../../../Downloads/Crystal_Regular.ttf; sourceTree = "<group>"; };
+		CED759272A5EE7050051B3F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,7 @@
 		CE93030D2A48A89E000FDA26 = {
 			isa = PBXGroup;
 			children = (
+				CED759242A5EE5D80051B3F6 /* Fonts */,
 				CE9303182A48A89E000FDA26 /* PLENKA */,
 				CE9303172A48A89E000FDA26 /* Products */,
 			);
@@ -63,6 +71,7 @@
 		CE9303182A48A89E000FDA26 /* PLENKA */ = {
 			isa = PBXGroup;
 			children = (
+				CED759272A5EE7050051B3F6 /* Info.plist */,
 				CE9303192A48A89E000FDA26 /* PLENKAApp.swift */,
 				CE93031B2A48A89E000FDA26 /* MainScreen.swift */,
 				CE9303222A48A8A0000FDA26 /* Persistence.swift */,
@@ -73,6 +82,8 @@
 				CE93F97C2A4B1422002F3E55 /* CircleImageView.swift */,
 				CE159A842A5DA36800B44A0A /* StoriesView.swift */,
 				CE159A862A5DABCA00B44A0A /* StoriesActionSheet.swift */,
+				CED759202A5EE4BA0051B3F6 /* ProfileView.swift */,
+				CED759222A5EE4D70051B3F6 /* Main.swift */,
 			);
 			path = PLENKA;
 			sourceTree = "<group>";
@@ -83,6 +94,14 @@
 				CE9303202A48A8A0000FDA26 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CED759242A5EE5D80051B3F6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CED759252A5EE6A50051B3F6 /* Crystal_Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9303212A48A8A0000FDA26 /* Preview Assets.xcassets in Resources */,
+				CED759262A5EE6A50051B3F6 /* Crystal_Regular.ttf in Resources */,
 				CE93031E2A48A8A0000FDA26 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,7 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED759232A5EE4D70051B3F6 /* Main.swift in Sources */,
 				CE9303232A48A8A0000FDA26 /* Persistence.swift in Sources */,
+				CED759212A5EE4BA0051B3F6 /* ProfileView.swift in Sources */,
 				CE93031C2A48A89E000FDA26 /* MainScreen.swift in Sources */,
 				CE93F9682A4A2DFE002F3E55 /* ImagePicker.swift in Sources */,
 				CE159A852A5DA36800B44A0A /* StoriesView.swift in Sources */,
@@ -294,6 +316,7 @@
 				DEVELOPMENT_TEAM = LGYHVZBWQY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PLENKA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -323,6 +346,7 @@
 				DEVELOPMENT_TEAM = LGYHVZBWQY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PLENKA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

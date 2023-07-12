@@ -13,7 +13,7 @@ struct PLENKAApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainScreen()
+            Main()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

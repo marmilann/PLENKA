@@ -60,9 +60,9 @@ struct MainScreen: View {
                         .padding(.horizontal, 20)
                     VStack(alignment: .leading) {
                         Text("UserName")
-                            .font(.system(size: 13.5, weight: .medium))
+                            .font(.system(size: 20.5, weight: .heavy))
                         Text("UserLocation")
-                            .font(.system(size: 11.5, weight: .regular))
+                            .font(.system(size: 13.5, weight: .regular))
                     }
                     Spacer()
                 }
@@ -85,21 +85,21 @@ struct MainScreen: View {
                     }) {
                         Image(likeTap ? "IconLikeColor" : "IconLike")
                             .resizable()
-                            .frame(width: 35.0, height: 35.5)
+                            .frame(width: 27.0, height: 28.5)
                     }
                     Button(action: {
                         print("Comment")
                     }) {
                         Image("IconComment")
                             .resizable()
-                            .frame(width: 35.0, height: 35.5)
+                            .frame(width: 28.0, height: 28.5)
                     }
                     Button(action: {
                         print("Send")
                     }) {
                         Image("IconDirect")
                             .resizable()
-                            .frame(width: 35.0, height: 28)
+                            .frame(width: 28.0, height: 28.5)
                     }
                     Spacer()
                 }

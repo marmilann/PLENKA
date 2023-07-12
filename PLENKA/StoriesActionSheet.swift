@@ -21,6 +21,7 @@ struct StoriesActionSheet: View {
                 Image("UserStories3")
                     .resizable()
             }
+            .frame(width: 450, height: 980)
             .tabViewStyle(.page(indexDisplayMode: .never))
             .edgesIgnoringSafeArea(.all)
 
