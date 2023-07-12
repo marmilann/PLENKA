@@ -18,3 +18,10 @@ struct PLENKAApp: App {
         }
     }
 }
+
+struct PLENKAApp_Previews: PreviewProvider {
+    static var previews: some View {
+        Main()
+            .previewDevice("")
+    }
+}

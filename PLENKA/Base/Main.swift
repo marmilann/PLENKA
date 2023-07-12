@@ -11,16 +11,20 @@ struct Main: View {
     var body: some View {
         TabView {
             MainScreen()
-                .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
-                    Image(systemName: "book.fill")
-                    Text("News")
+                    Image("news")
                 }
-
+            
+            NewPostView()
+                .tabItem {
+                    Image("camera")
+                }
+            
             ProfileView()
                 .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("Profile")
+                    Image("profile")
+                        .resizable()
+                        .frame(width: 100, height: 100)
                 }
         }
     }

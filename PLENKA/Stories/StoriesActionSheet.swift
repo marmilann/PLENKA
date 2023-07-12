@@ -35,8 +35,10 @@ struct StoriesActionSheet: View {
                     .clipShape(Circle())
                     .padding(.trailing, 350)
                 VStack {
-                    Text(" UserName").foregroundColor(.white).font(.system(size: 14.5, weight: .heavy))
-                    Text("1 hour ago").foregroundColor(.white).font(.system(size: 14.5, weight: .medium))
+                    Text("UserName")
+                        .foregroundColor(.white).font(.system(size: 14.5, weight: .heavy))
+                    Text("1 hour ago")
+                        .foregroundColor(.white).font(.system(size: 14.5, weight: .medium))
                 }
                 .padding(.leading, -130)
             }

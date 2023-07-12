@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A67FCF912A5F383500A5F1CD /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67FCF902A5F383500A5F1CD /* CustomTabBar.swift */; };
+		A67FCF972A5F5BB900A5F1CD /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67FCF962A5F5BB900A5F1CD /* NewPostView.swift */; };
 		CE159A852A5DA36800B44A0A /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE159A842A5DA36800B44A0A /* StoriesView.swift */; };
 		CE159A872A5DABCA00B44A0A /* StoriesActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE159A862A5DABCA00B44A0A /* StoriesActionSheet.swift */; };
 		CE93031A2A48A89E000FDA26 /* PLENKAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9303192A48A89E000FDA26 /* PLENKAApp.swift */; };
 		CE93031C2A48A89E000FDA26 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93031B2A48A89E000FDA26 /* MainScreen.swift */; };
 		CE93031E2A48A8A0000FDA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE93031D2A48A8A0000FDA26 /* Assets.xcassets */; };
-		CE9303212A48A8A0000FDA26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9303202A48A8A0000FDA26 /* Preview Assets.xcassets */; };
 		CE9303232A48A8A0000FDA26 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9303222A48A8A0000FDA26 /* Persistence.swift */; };
 		CE9303262A48A8A0000FDA26 /* PLENKA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE9303242A48A8A0000FDA26 /* PLENKA.xcdatamodeld */; };
 		CE93F9682A4A2DFE002F3E55 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F9672A4A2DFE002F3E55 /* ImagePicker.swift */; };
@@ -22,13 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A67FCF902A5F383500A5F1CD /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		A67FCF962A5F5BB900A5F1CD /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		CE159A842A5DA36800B44A0A /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
 		CE159A862A5DABCA00B44A0A /* StoriesActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesActionSheet.swift; sourceTree = "<group>"; };
 		CE9303162A48A89E000FDA26 /* PLENKA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLENKA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9303192A48A89E000FDA26 /* PLENKAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLENKAApp.swift; sourceTree = "<group>"; };
 		CE93031B2A48A89E000FDA26 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		CE93031D2A48A8A0000FDA26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE9303202A48A8A0000FDA26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE9303222A48A8A0000FDA26 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		CE9303252A48A8A0000FDA26 /* PLENKA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PLENKA.xcdatamodel; sourceTree = "<group>"; };
 		CE93F9672A4A2DFE002F3E55 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -49,6 +51,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A67FCF922A5F5B1400A5F1CD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CED759202A5EE4BA0051B3F6 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A67FCF932A5F5B3300A5F1CD /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				CE159A842A5DA36800B44A0A /* StoriesView.swift */,
+				CE159A862A5DABCA00B44A0A /* StoriesActionSheet.swift */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
+		A67FCF942A5F5B7B00A5F1CD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE93031B2A48A89E000FDA26 /* MainScreen.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A67FCF952A5F5B9700A5F1CD /* NewPost */ = {
+			isa = PBXGroup;
+			children = (
+				A67FCF962A5F5BB900A5F1CD /* NewPostView.swift */,
+			);
+			path = NewPost;
+			sourceTree = "<group>";
+		};
+		A67FCF982A5F5BFD00A5F1CD /* UICoponents */ = {
+			isa = PBXGroup;
+			children = (
+				A67FCF902A5F383500A5F1CD /* CustomTabBar.swift */,
+				CE93F97C2A4B1422002F3E55 /* CircleImageView.swift */,
+				CE93F9672A4A2DFE002F3E55 /* ImagePicker.swift */,
+			);
+			path = UICoponents;
+			sourceTree = "<group>";
+		};
+		A67FCF992A5F5C2200A5F1CD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A6AFF99A2A5F5C5900119175 /* DataBase */,
+				CED759222A5EE4D70051B3F6 /* Main.swift */,
+				CE9303192A48A89E000FDA26 /* PLENKAApp.swift */,
+				CE9303222A48A8A0000FDA26 /* Persistence.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A6AFF99A2A5F5C5900119175 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				CE9303242A48A8A0000FDA26 /* PLENKA.xcdatamodeld */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
 		CE93030D2A48A89E000FDA26 = {
 			isa = PBXGroup;
 			children = (
@@ -68,29 +132,16 @@
 		CE9303182A48A89E000FDA26 /* PLENKA */ = {
 			isa = PBXGroup;
 			children = (
+				A67FCF992A5F5C2200A5F1CD /* Base */,
+				A67FCF982A5F5BFD00A5F1CD /* UICoponents */,
+				A67FCF952A5F5B9700A5F1CD /* NewPost */,
+				A67FCF942A5F5B7B00A5F1CD /* Main */,
+				A67FCF932A5F5B3300A5F1CD /* Stories */,
+				A67FCF922A5F5B1400A5F1CD /* Profile */,
 				CED759272A5EE7050051B3F6 /* Info.plist */,
-				CE9303192A48A89E000FDA26 /* PLENKAApp.swift */,
-				CE93031B2A48A89E000FDA26 /* MainScreen.swift */,
-				CE9303222A48A8A0000FDA26 /* Persistence.swift */,
 				CE93031D2A48A8A0000FDA26 /* Assets.xcassets */,
-				CE9303242A48A8A0000FDA26 /* PLENKA.xcdatamodeld */,
-				CE93031F2A48A8A0000FDA26 /* Preview Content */,
-				CE93F9672A4A2DFE002F3E55 /* ImagePicker.swift */,
-				CE93F97C2A4B1422002F3E55 /* CircleImageView.swift */,
-				CE159A842A5DA36800B44A0A /* StoriesView.swift */,
-				CE159A862A5DABCA00B44A0A /* StoriesActionSheet.swift */,
-				CED759202A5EE4BA0051B3F6 /* ProfileView.swift */,
-				CED759222A5EE4D70051B3F6 /* Main.swift */,
 			);
 			path = PLENKA;
-			sourceTree = "<group>";
-		};
-		CE93031F2A48A8A0000FDA26 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				CE9303202A48A8A0000FDA26 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +202,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9303212A48A8A0000FDA26 /* Preview Assets.xcassets in Resources */,
 				CE93031E2A48A8A0000FDA26 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +216,8 @@
 				CED759232A5EE4D70051B3F6 /* Main.swift in Sources */,
 				CE9303232A48A8A0000FDA26 /* Persistence.swift in Sources */,
 				CED759212A5EE4BA0051B3F6 /* ProfileView.swift in Sources */,
+				A67FCF972A5F5BB900A5F1CD /* NewPostView.swift in Sources */,
+				A67FCF912A5F383500A5F1CD /* CustomTabBar.swift in Sources */,
 				CE93031C2A48A89E000FDA26 /* MainScreen.swift in Sources */,
 				CE93F9682A4A2DFE002F3E55 /* ImagePicker.swift in Sources */,
 				CE159A852A5DA36800B44A0A /* StoriesView.swift in Sources */,
@@ -300,7 +352,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PLENKA/Preview Content\"";
 				DEVELOPMENT_TEAM = LGYHVZBWQY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -330,7 +381,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PLENKA/Preview Content\"";
 				DEVELOPMENT_TEAM = LGYHVZBWQY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

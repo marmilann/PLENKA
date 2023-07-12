@@ -2,7 +2,7 @@
 //  ProfileView.swift
 //  PLENKA
 //
-//  Created by Nariman Vildanov on 12.07.2023.
+//  Created by Nariman on 12.07.2023.
 //
 
 import SwiftUI
@@ -39,11 +39,11 @@ struct ProfileView: View {
                 }
             }
             
-            Text("John Doe")
+            Text("Adel Ahtyamov")
                 .font(.title)
                 .padding(.top, 8)
             
-            Text("@johndoe")
+            Text("@ahtyam_10")
                 .font(.subheadline)
                 .foregroundColor(.gray)
                 .padding(.top, 4)
@@ -132,7 +132,6 @@ struct ProfileView: View {
             
             Spacer()
         }
-        .animation(.default)
     }
 }
 
