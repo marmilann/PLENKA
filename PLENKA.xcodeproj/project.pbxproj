@@ -19,7 +19,6 @@
 		CE93F97D2A4B1422002F3E55 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F97C2A4B1422002F3E55 /* CircleImageView.swift */; };
 		CED759212A5EE4BA0051B3F6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED759202A5EE4BA0051B3F6 /* ProfileView.swift */; };
 		CED759232A5EE4D70051B3F6 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED759222A5EE4D70051B3F6 /* Main.swift */; };
-		CED759262A5EE6A50051B3F6 /* Crystal_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED759252A5EE6A50051B3F6 /* Crystal_Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +35,6 @@
 		CE93F97C2A4B1422002F3E55 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		CED759202A5EE4BA0051B3F6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CED759222A5EE4D70051B3F6 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
-		CED759252A5EE6A50051B3F6 /* Crystal_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Crystal_Regular.ttf; path = ../../../../../Downloads/Crystal_Regular.ttf; sourceTree = "<group>"; };
 		CED759272A5EE7050051B3F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +52,6 @@
 		CE93030D2A48A89E000FDA26 = {
 			isa = PBXGroup;
 			children = (
-				CED759242A5EE5D80051B3F6 /* Fonts */,
 				CE9303182A48A89E000FDA26 /* PLENKA */,
 				CE9303172A48A89E000FDA26 /* Products */,
 			);
@@ -94,14 +91,6 @@
 				CE9303202A48A8A0000FDA26 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		CED759242A5EE5D80051B3F6 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				CED759252A5EE6A50051B3F6 /* Crystal_Regular.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,7 +152,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9303212A48A8A0000FDA26 /* Preview Assets.xcassets in Resources */,
-				CED759262A5EE6A50051B3F6 /* Crystal_Regular.ttf in Resources */,
 				CE93031E2A48A8A0000FDA26 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
