@@ -14,8 +14,7 @@ struct StoriesView: View {
     
     var body: some View {
         ZStack {
-            
-            Image ("InstaColor")
+            Image("InstaColor")
                 .resizable()
                 .frame(width: 76, height: 76)
                 .clipped()
@@ -33,9 +32,7 @@ struct StoriesView: View {
                     .padding(.horizontal, 20)
                     .clipShape(Circle())
             }
-            .sheet(isPresented: $openStories) {
-                StoriesActionSheet()
-            }
+            .fullScreenCover(isPresented: $openStories, content: StoriesActionSheet.init)
         }
         .frame(width: 90.0, height: 90)
     }

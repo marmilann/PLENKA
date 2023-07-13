@@ -10,6 +10,9 @@ import SwiftUI
 struct MainScreen: View {
     @State private var isShowPhotoLibrary = false
     @State private var likeTap = false
+    @State private var openImagePicker = false
+    @State private var openComments = false
+    @State private var selectedImages: [String] = []
     
     var photos: [String] = ["UserPhoto"]
     
@@ -20,11 +23,9 @@ struct MainScreen: View {
                     Image("IconPlenkaInscription")
                         .resizable()
                         .frame(width: 200.0, height: 55.5)
-                    
                     Spacer()
-                    
                     Button(action: {
-                        isShowPhotoLibrary = true
+                        openImagePicker.toggle()
                         print("Button tapped")
                     }) {
                         Image("addNewPost")
@@ -68,12 +69,13 @@ struct MainScreen: View {
                     }
                     ZStack {
                         TabView {
-                            ForEach(0..<2) { _ in
-                                Image("UserPost")
+                            ForEach(selectedImages, id: \.self) { imageString in
+                                Image(uiImage: UIImage(data: Data(base64Encoded: imageString)!)!)
                                     .resizable()
                             }
                         }
-                        .frame(width: 350, height: 350)
+                        .edgesIgnoringSafeArea([.leading, .trailing])
+                        .frame(width: 400, height: 350)
                         .tabViewStyle(.page(indexDisplayMode: .never))
                     }
                 }
@@ -99,15 +101,6 @@ struct MainScreen: View {
                             .frame(width: 100, height: 100)
                             .padding(.trailing, -60)
                     }
-                    
-                    Button(action: {
-                        print("Send")
-                    }) {
-                        Image("share")
-                            .resizable()
-                            .frame(width: 100, height: 100)
-                    }
-                    Spacer()
                 }
                 .padding(.leading, -8)
                 .padding(.top, -30)
@@ -142,16 +135,30 @@ struct MainScreen: View {
                 HStack {
                     Text("@ahtyam_10")
                         .font(.system(size: 15.5, weight: .bold))
+                        .padding(.leading, -15)
                     
                     Text("Resting...")
                         .font(.system(size: 13.5, weight: .regular))
                 }
                 .padding(.leading, -170)
                 
+                VStack {
+                    Spacer()
+                    Button(action: {
+                        openComments.toggle()
+                    }) {
+                        Text("See all comments (99)")
+                            .font(.system(size: 12, weight: .light))
+                            .foregroundColor(Color.gray)
+                            .padding(.trailing, 235)
+                    }
+                }
+                .sheet(isPresented: $openComments) {
+                    CommentsView()
+                }
             }
-            
-            .sheet(isPresented: $isShowPhotoLibrary) {
-                ImagePicker(sourceType: .photoLibrary)
+            .sheet(isPresented: $openImagePicker) {
+                ImagePicker(selectedImages: $selectedImages, isPresented: $openImagePicker)
             }
         }
     }

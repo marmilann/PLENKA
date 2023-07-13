@@ -13,7 +13,7 @@ struct PLENKAApp: App {
 
     var body: some Scene {
         WindowGroup {
-            Main()
+            CustomTabBar(selectedTab: .home, allCases: CustomTabBarItem.allCases)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
@@ -21,7 +21,7 @@ struct PLENKAApp: App {
 
 struct PLENKAApp_Previews: PreviewProvider {
     static var previews: some View {
-        Main()
+        MainScreen()
             .previewDevice("")
     }
 }
