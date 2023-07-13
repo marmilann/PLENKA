@@ -23,7 +23,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         
         func imagePickerController(_ picker: UIImagePickerController,
                                    didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-            if let selectedImage = info[.cropRect] as? UIImage {
+            if let selectedImage = info[.originalImage] as? UIImage {
                 if let imageData = selectedImage.jpegData(compressionQuality: 0.8) {
                     let imageString = imageData.base64EncodedString()
                     selectedImages.append(imageString)
