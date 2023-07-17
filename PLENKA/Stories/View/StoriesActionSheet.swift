@@ -31,8 +31,8 @@ struct StoriesActionSheet: View {
                 Color.black.edgesIgnoringSafeArea([.trailing, .leading])
                     .opacity(0.7)
             }
-            .frame(width: 600, height: 190)
-            .padding(.bottom, 760)
+            .frame(width: 600, height: 390)
+            .padding(.bottom, 960)
             ZStack {
                 Image("InstaColor")
                     .resizable()

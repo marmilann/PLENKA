@@ -38,7 +38,7 @@ enum CustomTabBarItem: TabBarItemProtocol {
     func getContent() -> some View {
         switch self {
         case .home:
-            MainScreen()
+            MainScreenView(viewModel: MainScreenViewModel())
             .setupCustomTab(tab: CustomTabBarItem.home)
         case .newPost:
             NewPostView()

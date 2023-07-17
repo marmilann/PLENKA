@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CommentsView: View {
     @State private var likeTap = false
+    
     var body: some View {
         HStack(alignment: .top) {
             Image("UserPhoto")

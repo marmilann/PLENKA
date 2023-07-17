@@ -7,15 +7,12 @@
 
 import SwiftUI
 
-
-
 struct CommentsSheet: View {
     @State public var addComment = ""
     var body: some View {
         ZStack {
             ScrollView(.vertical) {
                 VStack(spacing: -5) {
-                    
                     ForEach(0..<15) { _ in
                         CommentsView()
                     }
@@ -27,11 +24,8 @@ struct CommentsSheet: View {
     }
 }
 
-
 struct CommentsSheet_Previews: PreviewProvider {
     static var previews: some View {
         CommentsSheet()
     }
 }
-
-

@@ -10,8 +10,6 @@ import SwiftUI
 struct NewPostView: View {
     @State public var isShowPhotoLibrary = false
     @State public var addComment = ""
-   
-   
     
     var body: some View {
         ZStack {
@@ -26,22 +24,18 @@ struct NewPostView: View {
                         .frame(width: 300, height: 170)
                         .padding(-40)
                         .padding(.bottom, 25)
-                    
                 }
             }
             .frame(width: 400, height: 400)
             .padding(.bottom, 350)
             
-            
             VStack {
                 NewPostTextField(textField: TextField("Add Comment...", text: $addComment), imageName: "UserPhoto")
                     .font(.system(size: 23))
                     .frame(width: 350, height: 100)
-                
             }
         }
     }
-    
     
     struct NewPostView_Previews: PreviewProvider {
         static var previews: some View {
