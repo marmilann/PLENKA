@@ -10,11 +10,13 @@
 		A67FCF912A5F383500A5F1CD /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67FCF902A5F383500A5F1CD /* CustomTabBar.swift */; };
 		A67FCF972A5F5BB900A5F1CD /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67FCF962A5F5BB900A5F1CD /* NewPostView.swift */; };
 		A6AFF99D2A60517700119175 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AFF99C2A60517700119175 /* CommentsView.swift */; };
-		A6AFF99F2A6051AC00119175 /* TextFields+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AFF99E2A6051AC00119175 /* TextFields+.swift */; };
+		A6AFF99F2A6051AC00119175 /* NewPostTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AFF99E2A6051AC00119175 /* NewPostTextField.swift */; };
 		A6AFF9A12A6051D400119175 /* Colors+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AFF9A02A6051D400119175 /* Colors+.swift */; };
 		A6AFF9A62A60534C00119175 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AFF9A52A60534C00119175 /* ProfileViewModel.swift */; };
+		CE1529D02A64D3C700D4192A /* CommentTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1529CF2A64D3C700D4192A /* CommentTextField.swift */; };
 		CE159A852A5DA36800B44A0A /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE159A842A5DA36800B44A0A /* StoriesView.swift */; };
 		CE159A872A5DABCA00B44A0A /* StoriesActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE159A862A5DABCA00B44A0A /* StoriesActionSheet.swift */; };
+		CE34B0892A60B3CB00F1FEA0 /* CommentsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34B0882A60B3CB00F1FEA0 /* CommentsSheet.swift */; };
 		CE93031A2A48A89E000FDA26 /* PLENKAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9303192A48A89E000FDA26 /* PLENKAApp.swift */; };
 		CE93031C2A48A89E000FDA26 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93031B2A48A89E000FDA26 /* MainScreen.swift */; };
 		CE93031E2A48A8A0000FDA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE93031D2A48A8A0000FDA26 /* Assets.xcassets */; };
@@ -30,11 +32,13 @@
 		A67FCF902A5F383500A5F1CD /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		A67FCF962A5F5BB900A5F1CD /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		A6AFF99C2A60517700119175 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
-		A6AFF99E2A6051AC00119175 /* TextFields+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFields+.swift"; sourceTree = "<group>"; };
+		A6AFF99E2A6051AC00119175 /* NewPostTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostTextField.swift; sourceTree = "<group>"; };
 		A6AFF9A02A6051D400119175 /* Colors+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+.swift"; sourceTree = "<group>"; };
 		A6AFF9A52A60534C00119175 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		CE1529CF2A64D3C700D4192A /* CommentTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTextField.swift; sourceTree = "<group>"; };
 		CE159A842A5DA36800B44A0A /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
 		CE159A862A5DABCA00B44A0A /* StoriesActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesActionSheet.swift; sourceTree = "<group>"; };
+		CE34B0882A60B3CB00F1FEA0 /* CommentsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsSheet.swift; sourceTree = "<group>"; };
 		CE9303162A48A89E000FDA26 /* PLENKA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLENKA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9303192A48A89E000FDA26 /* PLENKAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLENKAApp.swift; sourceTree = "<group>"; };
 		CE93031B2A48A89E000FDA26 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
@@ -135,8 +139,9 @@
 		A6AFF9A22A60520800119175 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A6AFF99E2A6051AC00119175 /* TextFields+.swift */,
+				A6AFF99E2A6051AC00119175 /* NewPostTextField.swift */,
 				A6AFF9A02A6051D400119175 /* Colors+.swift */,
+				CE1529CF2A64D3C700D4192A /* CommentTextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				A6AFF99C2A60517700119175 /* CommentsView.swift */,
+				CE34B0882A60B3CB00F1FEA0 /* CommentsSheet.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED759232A5EE4D70051B3F6 /* Main.swift in Sources */,
+				CE1529D02A64D3C700D4192A /* CommentTextField.swift in Sources */,
 				CE9303232A48A8A0000FDA26 /* Persistence.swift in Sources */,
 				CED759212A5EE4BA0051B3F6 /* ProfileView.swift in Sources */,
 				A6AFF9A12A6051D400119175 /* Colors+.swift in Sources */,
@@ -322,13 +329,14 @@
 				CE93031C2A48A89E000FDA26 /* MainScreen.swift in Sources */,
 				CE93F9682A4A2DFE002F3E55 /* ImagePicker.swift in Sources */,
 				CE159A852A5DA36800B44A0A /* StoriesView.swift in Sources */,
-				A6AFF99F2A6051AC00119175 /* TextFields+.swift in Sources */,
+				A6AFF99F2A6051AC00119175 /* NewPostTextField.swift in Sources */,
 				CE9303262A48A8A0000FDA26 /* PLENKA.xcdatamodeld in Sources */,
 				CE159A872A5DABCA00B44A0A /* StoriesActionSheet.swift in Sources */,
 				A6AFF99D2A60517700119175 /* CommentsView.swift in Sources */,
 				CE93F97D2A4B1422002F3E55 /* CircleImageView.swift in Sources */,
 				A6AFF9A62A60534C00119175 /* ProfileViewModel.swift in Sources */,
 				CE93031A2A48A89E000FDA26 /* PLENKAApp.swift in Sources */,
+				CE34B0892A60B3CB00F1FEA0 /* CommentsSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +464,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2249AJ7FW9;
+				DEVELOPMENT_TEAM = LGYHVZBWQY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PLENKA/Info.plist;
@@ -471,7 +479,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Nariman.PLENKA1;
+				PRODUCT_BUNDLE_IDENTIFIER = Nariman.PLENKA123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -486,7 +494,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2249AJ7FW9;
+				DEVELOPMENT_TEAM = LGYHVZBWQY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PLENKA/Info.plist;
@@ -501,7 +509,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Nariman.PLENKA1;
+				PRODUCT_BUNDLE_IDENTIFIER = Nariman.PLENKA123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

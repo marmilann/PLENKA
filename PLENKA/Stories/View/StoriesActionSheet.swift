@@ -18,7 +18,7 @@ struct StoriesActionSheet: View {
     var body: some View {
         ZStack {
             TabView(selection: $currentIndex) {
-                ForEach(0..<images.count) { index in
+                ForEach(0..<images.count, id: \.self) { index in
                     Image(images[index])
                         .resizable()
                         .tag(index)
@@ -63,7 +63,7 @@ struct StoriesActionSheet: View {
                 .padding(.top, 12)
                 .padding(.leading, -80)
                 HStack(spacing: 3) {
-                    ForEach(0..<images.count) { index in
+                    ForEach(0..<images.count, id: \.self) { index in
                         if index == currentIndex {
                             Color.white
                                 .frame(width: 30, height: 5)

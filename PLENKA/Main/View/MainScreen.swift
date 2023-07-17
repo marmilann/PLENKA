@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct MainScreen: View {
-    @State private var isShowPhotoLibrary = false
-    @State private var likeTap = false
-    @State private var openImagePicker = false
-    @State private var openComments = false
-    @State private var selectedImages: [String] = []
+    @State public var isShowPhotoLibrary = false
+    @State public var likeTap = false
+    @State public var openImagePicker = false
+    @State public var openComments = false
+    @State public var selectedImages: [String] = []
+    @State public var addComment = ""
+ 
     
     var photos: [String] = ["UserPhoto"]
     
@@ -44,6 +46,7 @@ struct MainScreen: View {
                     }
                 }
                 .scrollIndicators(.hidden)
+                .padding(.top, -25)
                 
                 Divider()
                     .background(Color.black)
@@ -89,22 +92,23 @@ struct MainScreen: View {
                     }) {
                         Image(likeTap ? "likeTapped" : "like")
                             .resizable()
-                            .frame(width: 100, height: 100)
-                            .padding(.trailing, -55)
+                            .frame(width: 90, height: 90)
+                            .padding(-30)
+                            .padding(.leading, 15)
+                           
                     }
-                    
                     Button(action: {
                         print("Comment")
                     }) {
                         Image("comment")
                             .resizable()
-                            .frame(width: 100, height: 100)
-                            .padding(.trailing, -60)
+                            .frame(width: 110, height: 100)
+                            .padding(-35)
                     }
+                    
+                    Spacer()
                 }
-                .padding(.leading, -8)
-                .padding(.top, -30)
-                .padding(.bottom, -30)
+              
                 
                 HStack(spacing: 2) {
                     HStack(spacing: -15) {
@@ -112,7 +116,7 @@ struct MainScreen: View {
                             CircledImageView(imageName: "")
                         }
                     }
-                    .padding(.leading, 80)
+                    .padding(.leading, 70)
                     
                     Text("Liked by ")
                         .font(.system(size: 13.5, weight: .regular))
@@ -135,12 +139,12 @@ struct MainScreen: View {
                 HStack {
                     Text("@ahtyam_10")
                         .font(.system(size: 15.5, weight: .bold))
-                        .padding(.leading, -15)
-                    
                     Text("Resting...")
                         .font(.system(size: 13.5, weight: .regular))
                 }
-                .padding(.leading, -170)
+                .padding(.trailing, 230)
+                .padding(.top, -10)
+            
                 
                 VStack {
                     Spacer()
@@ -150,12 +154,20 @@ struct MainScreen: View {
                         Text("See all comments (99)")
                             .font(.system(size: 12, weight: .light))
                             .foregroundColor(Color.gray)
-                            .padding(.trailing, 235)
+                            .padding(.trailing, 265)
                     }
                 }
                 .sheet(isPresented: $openComments) {
-                    CommentsView()
+                    CommentsSheet()
                 }
+                
+                VStack {
+                    CommentTextField(textField: TextField("Add Comment...", text: $addComment), imageName: "")
+                        .font(.system(size: 10))
+                        .frame(width: 250)
+                        .padding(.trailing, 140)
+                }
+                
             }
             .sheet(isPresented: $openImagePicker) {
                 ImagePicker(selectedImages: $selectedImages, isPresented: $openImagePicker)

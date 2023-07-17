@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct NewPostView: View {
-    @State private var isShowPhotoLibrary = false
-    @State private var addComment = ""
+    @State public var isShowPhotoLibrary = false
+    @State public var addComment = ""
+   
+   
+    
     var body: some View {
         ZStack {
             Color.lightShadow
@@ -20,22 +23,23 @@ struct NewPostView: View {
                 }) {
                     Image("IconPlenka")
                         .resizable()
-                        .frame(width: 300, height: 150)
-                        .padding(.bottom, 300)
+                        .frame(width: 300, height: 170)
+                        .padding(-40)
+                        .padding(.bottom, 25)
+                    
                 }
-                .padding(.top, 230)
             }
             .frame(width: 400, height: 400)
             .padding(.bottom, 350)
             
+            
             VStack {
-                NeumorphicStyleTextField(textField: TextField("Add Comment...", text: $addComment), imageName: "")
+                NewPostTextField(textField: TextField("Add Comment...", text: $addComment), imageName: "")
                     .font(.system(size: 23))
                     .frame(width: 350, height: 100)
                 
             }
         }
-        
     }
     
     
