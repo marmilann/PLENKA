@@ -12,9 +12,11 @@ struct MainScreen: View {
     @State public var likeTap = false
     @State public var openImagePicker = false
     @State public var openComments = false
+    @State public var SeeAllComments = false
     @State public var selectedImages: [String] = []
     @State public var addComment = ""
- 
+    
+    
     
     var photos: [String] = ["UserPhoto"]
     
@@ -94,10 +96,11 @@ struct MainScreen: View {
                             .resizable()
                             .frame(width: 90, height: 90)
                             .padding(-30)
-                            .padding(.leading, 15)
-                           
+                            .padding(.leading, 20)
+                        
                     }
                     Button(action: {
+                        openComments.toggle()
                         print("Comment")
                     }) {
                         Image("comment")
@@ -105,82 +108,80 @@ struct MainScreen: View {
                             .frame(width: 110, height: 100)
                             .padding(-35)
                     }
-                    
+                    .sheet(isPresented: $openComments) {
+                        CommentTextField(textField: TextField("Add Comment...", text: $addComment), imageName: "UserPhoto")
+                            .presentationDetents([.fraction(0.20), .fraction(0.40), .fraction(0.80)])
+                            .presentationDragIndicator(.visible)
+                           
+                      
+                    }
                     Spacer()
                 }
-              
-                
-                HStack(spacing: 2) {
-                    HStack(spacing: -15) {
-                        ForEach(0..<3) { _ in
-                            CircledImageView(imageName: "")
+                    
+                    HStack(spacing: 2) {
+                        HStack(spacing: -15) {
+                            ForEach(0..<3) { _ in
+                                CircledImageView(imageName: "")
+                            }
+                        }
+                        .padding(.leading, 70)
+                        
+                        Text("Liked by ")
+                            .font(.system(size: 13.5, weight: .regular))
+                        
+                        Text("Kirill, Nariman ")
+                            .font(.system(size: 13.5, weight: .medium))
+                        
+                        Text("and ")
+                            .font(.system(size: 13.5, weight: .regular))
+                        
+                        Text("others users")
+                            .font(.system(size: 13.5, weight: .medium))
+                        
+                        Spacer()
+                        Divider()
+                    }
+                    .padding(.bottom, 1)
+                    .padding(.leading, -58)
+                    
+                    HStack {
+                        Text("@ahtyam_10")
+                            .font(.system(size: 15.5, weight: .bold))
+                        Text("Resting...")
+                            .font(.system(size: 13.5, weight: .regular))
+                    }
+                    .padding(.trailing, 230)
+                    .padding(.top, -10)
+                    
+                    
+                    VStack {
+                        Spacer()
+                        Button(action: {
+                            SeeAllComments.toggle()
+                        }) {
+                            Text("See all comments (99)")
+                                .font(.system(size: 12, weight: .light))
+                                .foregroundColor(Color.gray)
+                                .padding(.trailing, 265)
                         }
                     }
-                    .padding(.leading, 70)
-                    
-                    Text("Liked by ")
-                        .font(.system(size: 13.5, weight: .regular))
-                    
-                    Text("Kirill, Nariman ")
-                        .font(.system(size: 13.5, weight: .medium))
-                    
-                    Text("and ")
-                        .font(.system(size: 13.5, weight: .regular))
-                    
-                    Text("others users")
-                        .font(.system(size: 13.5, weight: .medium))
-                    
-                    Spacer()
-                    Divider()
-                }
-                .padding(.bottom, 1)
-                .padding(.leading, -58)
-                
-                HStack {
-                    Text("@ahtyam_10")
-                        .font(.system(size: 15.5, weight: .bold))
-                    Text("Resting...")
-                        .font(.system(size: 13.5, weight: .regular))
-                }
-                .padding(.trailing, 230)
-                .padding(.top, -10)
-            
-                
-                VStack {
-                    Spacer()
-                    Button(action: {
-                        openComments.toggle()
-                    }) {
-                        Text("See all comments (99)")
-                            .font(.system(size: 12, weight: .light))
-                            .foregroundColor(Color.gray)
-                            .padding(.trailing, 265)
+                    .sheet(isPresented: $SeeAllComments) {
+                        CommentsSheet()
                     }
                 }
-                .sheet(isPresented: $openComments) {
-                    CommentsSheet()
+                .sheet(isPresented: $openImagePicker) {
+                    ImagePicker(selectedImages: $selectedImages, isPresented: $openImagePicker)
                 }
-                
-                VStack {
-                    CommentTextField(textField: TextField("Add Comment...", text: $addComment), imageName: "")
-                        .font(.system(size: 10))
-                        .frame(width: 250)
-                        .padding(.trailing, 140)
-                }
-                
-            }
-            .sheet(isPresented: $openImagePicker) {
-                ImagePicker(selectedImages: $selectedImages, isPresented: $openImagePicker)
             }
         }
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainScreen()
-            .previewDevice("")
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            MainScreen()
+                .previewDevice("")
+        }
     }
-}
 
+    
 

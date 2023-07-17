@@ -34,7 +34,7 @@ struct NewPostView: View {
             
             
             VStack {
-                NewPostTextField(textField: TextField("Add Comment...", text: $addComment), imageName: "")
+                NewPostTextField(textField: TextField("Add Comment...", text: $addComment), imageName: "UserPhoto")
                     .font(.system(size: 23))
                     .frame(width: 350, height: 100)
                 
