@@ -1,6 +1,6 @@
 
 //
-//  MainScreen.swift
+//  MainScreenView.swift
 //  PLENKA
 //
 //  Created by Nariman on 25.06.2023.
@@ -13,7 +13,7 @@ struct MainScreenView: View {
     @State public var likeTap = false
     @State public var openImagePicker = false
     @State public var openComments = false
-    @State public var SeeAllComments = false
+    @State public var seeAllComments = false
     @State public var selectedImages: [String] = []
     @State public var addComment = ""
     var photos: [String] = ["UserPhoto"]
@@ -157,7 +157,7 @@ struct MainScreenView: View {
                     VStack {
                         Spacer()
                         Button(action: {
-                            SeeAllComments.toggle()
+                            seeAllComments.toggle()
                         }) {
                             Text("See all comments (99)")
                                 .font(.system(size: 12, weight: .light))
@@ -165,7 +165,7 @@ struct MainScreenView: View {
                                 .padding(.trailing, 265)
                         }
                     }
-                    .sheet(isPresented: $SeeAllComments) {
+                    .sheet(isPresented: $seeAllComments) {
                         CommentsSheet()
                     }
                 }
