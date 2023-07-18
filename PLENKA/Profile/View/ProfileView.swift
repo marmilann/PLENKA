@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State private var openFollowers = false
+    @State private var openFollowing = false
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -35,19 +38,25 @@ struct ProfileView: View {
                     VStack(alignment: .leading) {
                         Text("post")
                             .font(.system(size: 28.5, weight: .medium))
-                        Text("followers")
-                            .font(.system(size: 28.5, weight: .medium))
-                        Text("following")
-                            .font(.system(size: 28.5, weight: .medium))
+                        NavigationLink(destination:FollowersView()) {
+                            Text("followers")
+                                .foregroundColor(Color.black)
+                                .font(.system(size: 28.5, weight: .medium))
+                        }
+                        NavigationLink(destination:FollowersView()) {
+                            Text("following")
+                                .foregroundColor(Color.black)
+                                .font(.system(size: 28.5, weight: .medium))
+                        }
                     }
                     .padding(.leading, 30)
                     Spacer()
                     VStack(alignment: .center) {
+                        Text("9")
+                            .font(.system(size: 28.5, weight: .regular))
                         Text("10")
                             .font(.system(size: 28.5, weight: .regular))
-                        Text("1k")
-                            .font(.system(size: 28.5, weight: .regular))
-                        Text("16")
+                        Text("10")
                             .font(.system(size: 28.5, weight: .regular))
                     }
                     .padding(.trailing, 30)
