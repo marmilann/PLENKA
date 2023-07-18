@@ -1,12 +1,11 @@
 //
-//  FollowingSheet.swift
+//  FollowingView.swift
 //  PLENKA
 //
 //  Created by Nariman on 18.07.2023.
 //
 
 import SwiftUI
-
 
 struct FollowingView: View {
     

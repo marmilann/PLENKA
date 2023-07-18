@@ -1,5 +1,5 @@
 //
-//  FollowingAccountView.swift
+//  AccountView.swift
 //  PLENKA
 //
 //  Created by Nariman on 18.07.2023.

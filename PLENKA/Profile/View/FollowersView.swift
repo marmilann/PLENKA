@@ -1,5 +1,5 @@
 //
-//  FollowersSheet.swift
+//  FollowersView.swift
 //  PLENKA
 //
 //  Created by Nariman on 18.07.2023.
@@ -21,6 +21,7 @@ struct FollowersView: View {
         }
     }
 }
+
     struct FollowersView_Previews: PreviewProvider {
         static var previews: some View {
             FollowersView()
