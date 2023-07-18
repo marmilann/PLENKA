@@ -21,7 +21,7 @@ struct PLENKAApp: App {
 
 struct PLENKAApp_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreenView(viewModel: MainScreenViewModel())
+        MainScreenView()
             .previewDevice("")
     }
 }
