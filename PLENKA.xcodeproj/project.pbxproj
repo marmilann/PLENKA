@@ -27,6 +27,7 @@
 		CE93F97D2A4B1422002F3E55 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F97C2A4B1422002F3E55 /* CircleImageView.swift */; };
 		CED759212A5EE4BA0051B3F6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED759202A5EE4BA0051B3F6 /* ProfileView.swift */; };
 		CED759232A5EE4D70051B3F6 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED759222A5EE4D70051B3F6 /* Main.swift */; };
+		CED817C82A66DAD600090169 /* ProfilePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED817C72A66DAD600090169 /* ProfilePostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		CED759202A5EE4BA0051B3F6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CED759222A5EE4D70051B3F6 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		CED759272A5EE7050051B3F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CED817C72A66DAD600090169 /* ProfilePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				A6C5A9122A65AD3D00BA6CC3 /* PostsView.swift */,
+				CED817C72A66DAD600090169 /* ProfilePostView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				CED759212A5EE4BA0051B3F6 /* ProfileView.swift in Sources */,
 				A6AFF9A12A6051D400119175 /* Colors+.swift in Sources */,
 				A67FCF972A5F5BB900A5F1CD /* NewPostView.swift in Sources */,
+				CED817C82A66DAD600090169 /* ProfilePostView.swift in Sources */,
 				A67FCF912A5F383500A5F1CD /* CustomTabBar.swift in Sources */,
 				A6C5A9152A65B45F00BA6CC3 /* MainScreenViewModel.swift in Sources */,
 				CE93031C2A48A89E000FDA26 /* MainScreenView.swift in Sources */,
