@@ -87,7 +87,6 @@ struct StoriesActionSheet: View {
                         } label: {
                             Image("leave")
                         }
-                        
                     }
                     .padding(.leading, 320)
                     .padding(.top, 4)

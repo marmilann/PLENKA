@@ -1,6 +1,6 @@
 
 //
-//  ContentView.swift
+//  MainScreen.swift
 //  PLENKA
 //
 //  Created by Nariman on 25.06.2023.
@@ -16,7 +16,6 @@ struct MainScreenView: View {
     @State public var SeeAllComments = false
     @State public var selectedImages: [String] = []
     @State public var addComment = ""
-    
     var photos: [String] = ["UserPhoto"]
     
     var body: some View {
@@ -183,6 +182,3 @@ struct MainScreenView: View {
                 .previewDevice("")
         }
     }
-
-    
-

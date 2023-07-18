@@ -31,7 +31,6 @@ struct ProfileView: View {
                 Divider()
                     .background(Color.black)
                     .padding(.bottom, 130)
-                
                 HStack {
                     VStack(alignment: .leading) {
                         Text("post")
@@ -65,7 +64,6 @@ struct ProfileView: View {
                         }
                     }
                 }
-                
                 .padding(.top, 550)
                 Divider()
                     .background(Color.black)

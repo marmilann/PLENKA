@@ -15,13 +15,11 @@ struct ProfilePostView: View {
     @State public var SeeAllComments = false
     @State public var selectedImages: [String] = []
     @State public var addComment = ""
-    
     var photos: [String] = ["UserPhoto"]
     
     var body: some View {
         ZStack {
             ScrollView {
-
                 VStack {
                     HStack {
                         Image("UserPhoto")
@@ -67,7 +65,6 @@ struct ProfilePostView: View {
                             .frame(width: 90, height: 90)
                             .padding(-30)
                             .padding(.leading, 20)
-                        
                     }
                     Button(action: {
                         openComments.toggle()
@@ -82,12 +79,9 @@ struct ProfilePostView: View {
                         CommentTextField(textField: TextField("Add Comment...", text: $addComment), imageName: "UserPhoto")
                             .presentationDetents([.fraction(0.20), .fraction(0.40), .fraction(0.80)])
                             .presentationDragIndicator(.visible)
-                           
-                      
                     }
                     Spacer()
                 }
-                    
                     HStack(spacing: 2) {
                         HStack(spacing: -15) {
                             ForEach(0..<3) { _ in
@@ -107,7 +101,6 @@ struct ProfilePostView: View {
                         
                         Text("others users")
                             .font(.system(size: 13.5, weight: .medium))
-                        
                         Spacer()
                         Divider()
                     }
@@ -122,7 +115,6 @@ struct ProfilePostView: View {
                     }
                     .padding(.trailing, 230)
                     .padding(.top, -10)
-                    
                     
                     VStack {
                         Spacer()
