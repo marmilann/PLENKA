@@ -31,9 +31,9 @@ struct ProfilePostView: View {
                             .padding(.horizontal, 20)
                         
                         VStack(alignment: .leading) {
-                            Text("ahtyam_10")
+                            Text(TextContainment.userName.text)
                                 .font(.system(size: 20.5, weight: .heavy))
-                            Text("X-Fit, Kazan")
+                            Text(TextContainment.location.text)
                                 .font(.system(size: 13.5, weight: .regular))
                         }
                         .padding(.leading, -10)
@@ -90,16 +90,16 @@ struct ProfilePostView: View {
                         }
                         .padding(.leading, 70)
                         
-                        Text("Liked by ")
+                        Text(TextContainment.likedby.text)
                             .font(.system(size: 13.5, weight: .regular))
                         
-                        Text("Kirill, Nariman ")
+                        Text(TextContainment.userlikes.text)
                             .font(.system(size: 13.5, weight: .medium))
                         
                         Text("and ")
                             .font(.system(size: 13.5, weight: .regular))
                         
-                        Text("others users")
+                        Text(TextContainment.otherlikes.text)
                             .font(.system(size: 13.5, weight: .medium))
                         Spacer()
                         Divider()
@@ -108,9 +108,9 @@ struct ProfilePostView: View {
                     .padding(.leading, -58)
                     
                     HStack {
-                        Text("@ahtyam_10")
+                        Text("@" + TextContainment.userName.text)
                             .font(.system(size: 15.5, weight: .bold))
-                        Text("Resting...")
+                        Text(TextContainment.discriptionComment.text)
                             .font(.system(size: 13.5, weight: .regular))
                     }
                     .padding(.trailing, 230)
@@ -121,7 +121,7 @@ struct ProfilePostView: View {
                         Button(action: {
                             SeeAllComments.toggle()
                         }) {
-                            Text("See all comments (99)")
+                            Text(TextContainment.allcomments.text)
                                 .font(.system(size: 12, weight: .light))
                                 .foregroundColor(Color.gray)
                                 .padding(.trailing, 265)

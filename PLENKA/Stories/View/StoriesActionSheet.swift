@@ -56,10 +56,10 @@ struct StoriesActionSheet: View {
                             .padding(.top, 14)
                     }
                     VStack(alignment: .leading) {
-                        Text("@ahtyam_10")
+                        Text("@" + TextContainment.userName.text)
                             .foregroundColor(deviceColorScheme == .light ? .white : .black)
                             .font(.system(size: 20, weight: .heavy))
-                        Text("1 hour ago")
+                        Text(TextContainment.commentTime.text)
                             .foregroundColor(deviceColorScheme == .light ? .white : .black)
                             .font(.system(size: 11, weight: .light))
                     }

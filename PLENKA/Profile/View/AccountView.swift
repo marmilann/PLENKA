@@ -20,7 +20,7 @@ struct AccountView: View {
                 .cornerRadius(100)
                 .padding(3)
             VStack(alignment: .leading) {
-                Text("Shrek")
+                Text(TextContainment.userName.text)
                     .font(.system(size: 15.5, weight: .heavy))
                 Text("Огр из Болота")
                     .font(.system(size: 15.5, weight: .light))
@@ -32,14 +32,14 @@ struct AccountView: View {
                     Button {
                         subscribe.toggle()
                     } label: {
-                        Text("подписаться")
+                        Text(TextContainment.subscribe.text)
                     }
                     .buttonStyle(.borderedProminent)
                 } else {
                     Button {
                         subscribe.toggle()
                     } label: {
-                        Text("вы подписаны")
+                        Text(TextContainment.yousubscribe.text)
                     }
                     .buttonStyle(.bordered)
                 }

@@ -20,10 +20,10 @@ struct CommentsView: View {
                 .cornerRadius(100)
                 .padding(3)
             VStack(alignment: .leading) {
-                Text("ahtyam_10_")
+                Text(TextContainment.userName.text)
                     .font(.system(size: 15.5, weight: .heavy))
                 +
-                Text("   3 hour ago")
+                Text(TextContainment.commentTime.text)
                     .font(.system(size: 14, weight: .light))
                 Text("my first comment")
                     .padding(.top, -5)

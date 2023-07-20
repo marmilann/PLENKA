@@ -21,9 +21,9 @@ struct ProfileView: View {
                         .clipShape(Circle())
                         .padding(3)
                     
-                    Text("UserName")
+                    Text(TextContainment.userName.text)
                         .font(.system(size: 55.5, weight: .heavy))
-                    Text("Hello! I am a beginner photographer, I will be glad if you like my content !!!")
+                    Text(TextContainment.bio.text)
                         .font(.system(size: 20.5, weight: .regular))
                         .multilineTextAlignment(.center)
                         .lineLimit(2)
@@ -36,15 +36,15 @@ struct ProfileView: View {
                     .padding(.bottom, 130)
                 HStack {
                     VStack(alignment: .leading) {
-                        Text("post")
+                        Text(TextContainment.post.text)
                             .font(.system(size: 28.5, weight: .medium))
                         NavigationLink(destination:FollowersView()) {
-                            Text("followers")
+                            Text(TextContainment.followers.text)
                                 .foregroundColor(Color.black)
                                 .font(.system(size: 28.5, weight: .medium))
                         }
                         NavigationLink(destination:FollowersView()) {
-                            Text("following")
+                            Text(TextContainment.following.text)
                                 .foregroundColor(Color.black)
                                 .font(.system(size: 28.5, weight: .medium))
                         }
