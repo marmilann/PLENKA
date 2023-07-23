@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "33FA45EA-0BC6-4945-900D-3147665579BB"
+   uuid = "6A3EBEBC-F987-461B-9D6C-E196D1E0A21A"
    type = "1"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "79CBCD38-0F97-4800-BA94-7AC4D744A9C9"
+            uuid = "56079F0F-E836-4861-BA9A-A3266184DDD2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PLENKA/ContentView.swift"
+            filePath = "PLENKA/Main/MainScreen.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>

@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  PLENKA
+
+  Created by Nariman on 20.07.2023.
+  
+*/
+
+"USER_NAME" = "ahtyam_10";
+"LOCATION" = "X-Fit, Kazan";
+"LIKED_BY" = "Liked by ";
+"USER_LIKES" = "Kirill, Nariman ";
+"OTHER_LIKES" = "others users";
+"DISCRIPTION_COMMENT" = "Resting...";
+"ALL_COMMENTS" = "See all comments (99)";
+"COMMENT_TIME" = "   3 hour ago";
+"BIO" = "Hello! I am a beginner photographer, I will be glad if you like my content !!!";
+"POST" = "post";
+"FOLLOWERS" = "followers";
+"FOLLOWING" = "following";
+"SUBSCRIBE" = "подписаться";
+"YOU_SUBSCRIBE" = "вы подписаны";
