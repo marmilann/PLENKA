@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Combine
+import FirebaseAuth
 
 class MainScreenViewModel: ObservableObject {
     

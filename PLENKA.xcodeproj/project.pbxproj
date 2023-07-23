@@ -29,7 +29,10 @@
 		CEB9357B2A6988D200906B88 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CEB9357A2A6988D200906B88 /* FirebaseAuth */; };
 		CEB9357D2A6988D200906B88 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CEB9357C2A6988D200906B88 /* FirebaseFirestore */; };
 		CEB9357F2A6988D200906B88 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CEB9357E2A6988D200906B88 /* FirebaseStorage */; };
-		CEB935812A6989BC00906B88 /* Sign In&Up.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB935802A6989BC00906B88 /* Sign In&Up.swift */; };
+		CEB935832A6998F300906B88 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB935822A6998F300906B88 /* SignIn.swift */; };
+		CEB935852A699B7F00906B88 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB935842A699B7F00906B88 /* SignUp.swift */; };
+		CEB935892A699D0B00906B88 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB935882A699D0B00906B88 /* Authentication.swift */; };
+		CEB935922A6AA4D700906B88 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB935912A6AA4D700906B88 /* AuthServices.swift */; };
 		CEB9F6812A6839D50070C5C5 /* TextContainment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9F6802A6839D50070C5C5 /* TextContainment.swift */; };
 		CEB9F6892A6974EE0070C5C5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEB9F6882A6974EE0070C5C5 /* Localizable.strings */; };
 		CEB9F68B2A6979460070C5C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEB9F68A2A6979450070C5C5 /* GoogleService-Info.plist */; };
@@ -61,7 +64,10 @@
 		CE9303252A48A8A0000FDA26 /* PLENKA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PLENKA.xcdatamodel; sourceTree = "<group>"; };
 		CE93F9672A4A2DFE002F3E55 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CE93F97C2A4B1422002F3E55 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
-		CEB935802A6989BC00906B88 /* Sign In&Up.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sign In&Up.swift"; sourceTree = "<group>"; };
+		CEB935822A6998F300906B88 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		CEB935842A699B7F00906B88 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		CEB935882A699D0B00906B88 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		CEB935912A6AA4D700906B88 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
 		CEB9F6802A6839D50070C5C5 /* TextContainment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextContainment.swift; sourceTree = "<group>"; };
 		CEB9F6882A6974EE0070C5C5 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CEB9F68A2A6979450070C5C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -306,6 +312,14 @@
 			path = PLENKA;
 			sourceTree = "<group>";
 		};
+		CEB935902A6AA4A300906B88 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CEB935912A6AA4D700906B88 /* AuthServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CEB9F67F2A6839130070C5C5 /* TextContainment */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,7 +332,10 @@
 		CEB9F6842A696C7D0070C5C5 /* Sign In&Up */ = {
 			isa = PBXGroup;
 			children = (
-				CEB935802A6989BC00906B88 /* Sign In&Up.swift */,
+				CEB935902A6AA4A300906B88 /* Services */,
+				CEB935822A6998F300906B88 /* SignIn.swift */,
+				CEB935842A699B7F00906B88 /* SignUp.swift */,
+				CEB935882A699D0B00906B88 /* Authentication.swift */,
 			);
 			path = "Sign In&Up";
 			sourceTree = "<group>";
@@ -409,20 +426,23 @@
 				A6AFF9A12A6051D400119175 /* Colors+.swift in Sources */,
 				A67FCF972A5F5BB900A5F1CD /* NewPostView.swift in Sources */,
 				CED817C82A66DAD600090169 /* ProfilePostView.swift in Sources */,
+				CEB935832A6998F300906B88 /* SignIn.swift in Sources */,
+				CEB935892A699D0B00906B88 /* Authentication.swift in Sources */,
 				CED817CC2A66E8AA00090169 /* FollowingView.swift in Sources */,
 				A67FCF912A5F383500A5F1CD /* CustomTabBar.swift in Sources */,
 				A6C5A9152A65B45F00BA6CC3 /* MainScreenViewModel.swift in Sources */,
+				CEB935852A699B7F00906B88 /* SignUp.swift in Sources */,
 				CE93031C2A48A89E000FDA26 /* MainScreenView.swift in Sources */,
 				A6C5A9132A65AD3D00BA6CC3 /* PostsView.swift in Sources */,
 				CE93F9682A4A2DFE002F3E55 /* ImagePicker.swift in Sources */,
 				CEB9F6812A6839D50070C5C5 /* TextContainment.swift in Sources */,
 				CE159A852A5DA36800B44A0A /* StoriesView.swift in Sources */,
-				CEB935812A6989BC00906B88 /* Sign In&Up.swift in Sources */,
 				CE9303262A48A8A0000FDA26 /* PLENKA.xcdatamodeld in Sources */,
 				CE159A872A5DABCA00B44A0A /* StoriesActionSheet.swift in Sources */,
 				A6AFF99D2A60517700119175 /* CommentsView.swift in Sources */,
 				CE93F97D2A4B1422002F3E55 /* CircleImageView.swift in Sources */,
 				A6AFF9A62A60534C00119175 /* ProfileViewModel.swift in Sources */,
+				CEB935922A6AA4D700906B88 /* AuthServices.swift in Sources */,
 				CE6E9F512A66EC21002ADC8D /* AccountView.swift in Sources */,
 				CE93031A2A48A89E000FDA26 /* PLENKAApp.swift in Sources */,
 				CED817CA2A66E89B00090169 /* FollowersView.swift in Sources */,

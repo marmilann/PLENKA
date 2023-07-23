@@ -85,3 +85,29 @@ struct NewPostTextField: View {
         .shadow(color: Color.lightShadow, radius: 3, x: -2, y: -2)
     }
 }
+
+struct AuthTextField: View {
+    var textField: TextField<Text>
+    var imageName: String
+    
+    var body: some View {
+        HStack {
+            Image(imageName)
+                .resizable()
+                .frame(width: 25.0, height: 25)
+                .padding(.leading, -7)
+                .padding(.trailing, -7)
+                .foregroundColor(.lightShadow)
+            textField
+        }
+        
+        .frame(width: 250, height: 35)
+        .padding()
+        .foregroundColor(.textColor)
+        .background(Color.background)
+        .cornerRadius(60)
+        .shadow(color: Color.darkShadow, radius: 3, x: 2, y: 2)
+        .shadow(color: Color.lightShadow, radius: 3, x: -2, y: -2)
+        .padding(.top, 35)
+    }
+}

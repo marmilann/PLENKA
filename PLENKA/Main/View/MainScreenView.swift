@@ -17,6 +17,7 @@ struct MainScreenView: View {
     @State public var selectedImages: [String] = []
     @State public var addComment = ""
     var photos: [String] = ["UserPhoto"]
+  
     
     var body: some View {
         NavigationView {

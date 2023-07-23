@@ -6,15 +6,25 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseAuth
 
 @main
 struct PLENKAApp: App {
+    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegete
     let persistenceController = PersistenceController.shared
-
+    
     var body: some Scene {
         WindowGroup {
-            CustomTabBar(selectedTab: .home, allCases: CustomTabBarItem.allCases)
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            Authentication()
+        }
+    }
+    class AppDelegete: NSObject, UIApplicationDelegate {
+        
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+            FirebaseApp .configure()
+            
+            return true
         }
     }
 }
