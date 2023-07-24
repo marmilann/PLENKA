@@ -11,10 +11,9 @@ struct SignUp: View {
     @State public var addMail = ""
     @State public var addPassword = ""
     @State public var addConfirmPassword = ""
-    @State private var isCustomTabBarShow = false
     @State private var isShowAlert = false
     @State private var alertMassage = ""
-     
+    
     var body: some View {
         ZStack {
             Image("AuthWallPapper")
@@ -41,7 +40,7 @@ struct SignUp: View {
                             addMail = ""
                             addPassword = ""
                             addConfirmPassword = ""
-                            isCustomTabBarShow.toggle()
+                            
                         case .failure(let error):
                             alertMassage = "Ошибка регистрации \(error.localizedDescription)"
                             isShowAlert.toggle()
@@ -60,11 +59,8 @@ struct SignUp: View {
                 } label: {
                     Text("OK ")
                 }
-
+                
             }
-        }
-        .fullScreenCover(isPresented: $isCustomTabBarShow) {
-            CustomTabBar(selectedTab: .profile, allCases: CustomTabBarItem.allCases)
         }
     }
 }

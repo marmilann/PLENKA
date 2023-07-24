@@ -51,8 +51,7 @@ struct SignIn: View {
                 }
             }
                    .fullScreenCover(isPresented: $isCustomTabBarShow) {
-                       CustomTabBar(selectedTab: .home, allCases: CustomTabBarItem.allCases)
-                       
+                       CustomTabBar(selectedTab: .profile, allCases: CustomTabBarItem.allCases)
                    }
         }
     }
