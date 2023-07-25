@@ -19,7 +19,19 @@ class AuthServices {
         auth.createUser(withEmail: email, password: password) { result, error in
             
             if let result = result {
-                completion(.success(result.user))
+                let nvUser = NVUser(id: result.user.uid,
+                                    name: "",
+                                    bio: "")
+                
+                DatabaseService.shared.setProfile(user: nvUser) { resultDB in
+                    switch resultDB {
+                        
+                    case .success(_):
+                        completion(.success(result.user))
+                    case .failure(let error):
+                        completion(.failure(error))
+                    }
+                }
             } else if let error = error {
                 completion(.failure(error))
             }

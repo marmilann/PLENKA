@@ -10,10 +10,12 @@ import SwiftUI
 struct ProfileView: View {
     @State private var openFollowers = false
     @State private var openFollowing = false
+    @StateObject var viewModel: ProfileViewModel
     
     var body: some View {
         NavigationView {
             ZStack {
+                ScrollView {
                     VStack {
                         Image("UserPhoto")
                             .resizable()
@@ -21,19 +23,18 @@ struct ProfileView: View {
                             .clipShape(Circle())
                             .padding(3)
                         
-                        Text(TextContainment.userName.text)
+                        TextField("User Name", text: $viewModel.profile.name)
                             .font(.system(size: 55.5, weight: .heavy))
-                        Text(TextContainment.bio.text)
+                        TextField("Your Bio", text: $viewModel.profile.bio)
                             .font(.system(size: 20.5, weight: .regular))
                             .multilineTextAlignment(.center)
                             .lineLimit(2)
                             .padding(.horizontal, 35)
+                        
                     }
-                    .padding(.bottom, 450)
                     
                     Divider()
                         .background(Color.black)
-                        .padding(.bottom, 130)
                     HStack {
                         VStack(alignment: .leading) {
                             Text(TextContainment.post.text)
@@ -52,7 +53,7 @@ struct ProfileView: View {
                         .padding(.leading, 30)
                         Spacer()
                         VStack(alignment: .center) {
-                            Text("9")
+                            Text("12")
                                 .font(.system(size: 28.5, weight: .regular))
                             Text("10")
                                 .font(.system(size: 28.5, weight: .regular))
@@ -62,10 +63,14 @@ struct ProfileView: View {
                         .padding(.trailing, 30)
                     }
                     .padding(.bottom, 20)
-                VStack {
-                    ScrollView {
+                    
+                    Divider()
+                        .background(Color.black)
+                        .padding(.top, -10)
+                    
+                    VStack {
                         LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 3)) {
-                            ForEach(0..<9) { index in
+                            ForEach(0..<15) { index in
                                 NavigationLink(destination: ProfilePostView()){
                                     Image("UserPost")
                                         .resizable()
@@ -77,18 +82,22 @@ struct ProfileView: View {
                         }
                     }
                 }
-                    .padding(.top, 485)
-                    Divider()
-                        .background(Color.black)
-                        .padding(.top, 130)
-                }
             }
         }
+        .onSubmit {
+            viewModel.setProfile()
+        }
+        .onAppear {
+            self.viewModel.getProfile()
+        }
     }
+}
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(viewModel: ProfileViewModel(profile: NVUser(id: "",
+                                                     name: "Ahtyam",
+                                                    bio: "i am cool")))
     }
 }
 

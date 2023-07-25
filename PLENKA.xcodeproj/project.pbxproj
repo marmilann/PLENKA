@@ -18,6 +18,8 @@
 		CE159A872A5DABCA00B44A0A /* StoriesActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE159A862A5DABCA00B44A0A /* StoriesActionSheet.swift */; };
 		CE34B0892A60B3CB00F1FEA0 /* CommentsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34B0882A60B3CB00F1FEA0 /* CommentsSheet.swift */; };
 		CE5733D62A65643000B6ADE1 /* TextFields+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5733D52A65643000B6ADE1 /* TextFields+.swift */; };
+		CE60924A2A6FE4F70043BF46 /* NVUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6092492A6FE4F70043BF46 /* NVUser.swift */; };
+		CE60924C2A6FE5C10043BF46 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE60924B2A6FE5C10043BF46 /* DatabaseService.swift */; };
 		CE6E9F512A66EC21002ADC8D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E9F502A66EC21002ADC8D /* AccountView.swift */; };
 		CE93031A2A48A89E000FDA26 /* PLENKAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9303192A48A89E000FDA26 /* PLENKAApp.swift */; };
 		CE93031C2A48A89E000FDA26 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93031B2A48A89E000FDA26 /* MainScreenView.swift */; };
@@ -55,6 +57,8 @@
 		CE159A862A5DABCA00B44A0A /* StoriesActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesActionSheet.swift; sourceTree = "<group>"; };
 		CE34B0882A60B3CB00F1FEA0 /* CommentsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsSheet.swift; sourceTree = "<group>"; };
 		CE5733D52A65643000B6ADE1 /* TextFields+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFields+.swift"; sourceTree = "<group>"; };
+		CE6092492A6FE4F70043BF46 /* NVUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVUser.swift; sourceTree = "<group>"; };
+		CE60924B2A6FE5C10043BF46 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		CE6E9F502A66EC21002ADC8D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CE9303162A48A89E000FDA26 /* PLENKA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLENKA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9303192A48A89E000FDA26 /* PLENKAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLENKAApp.swift; sourceTree = "<group>"; };
@@ -316,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB935912A6AA4D700906B88 /* AuthServices.swift */,
+				CE60924B2A6FE5C10043BF46 /* DatabaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 				CEB935822A6998F300906B88 /* SignIn.swift */,
 				CEB935842A699B7F00906B88 /* SignUp.swift */,
 				CEB935882A699D0B00906B88 /* Authentication.swift */,
+				CE6092492A6FE4F70043BF46 /* NVUser.swift */,
 			);
 			path = "Sign In&Up";
 			sourceTree = "<group>";
@@ -425,7 +431,9 @@
 				CED759212A5EE4BA0051B3F6 /* ProfileView.swift in Sources */,
 				A6AFF9A12A6051D400119175 /* Colors+.swift in Sources */,
 				A67FCF972A5F5BB900A5F1CD /* NewPostView.swift in Sources */,
+				CE60924C2A6FE5C10043BF46 /* DatabaseService.swift in Sources */,
 				CED817C82A66DAD600090169 /* ProfilePostView.swift in Sources */,
+				CE60924A2A6FE4F70043BF46 /* NVUser.swift in Sources */,
 				CEB935832A6998F300906B88 /* SignIn.swift in Sources */,
 				CEB935892A699D0B00906B88 /* Authentication.swift in Sources */,
 				CED817CC2A66E8AA00090169 /* FollowingView.swift in Sources */,

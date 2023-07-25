@@ -54,7 +54,7 @@ struct MainScreenView: View {
                         .background(Color.black)
                     VStack {
                         HStack {
-                            NavigationLink(destination: ProfileView()) {
+                            NavigationLink(destination: ProfileView(viewModel: ProfileViewModel(profile: NVUser(id: "", name: "", bio: "")))) {
                                 Image("UserPhoto")
                                     .resizable()
                                     .frame(width: 60.0, height: 60)

@@ -50,6 +50,5 @@ struct ImagePicker: UIViewControllerRepresentable {
     
     func updateUIViewController(_ uiViewController: UIImagePickerController,
                                 context: UIViewControllerRepresentableContext<ImagePicker>) {
-        // Нет необходимости в обновлении контроллера
     }
 }

@@ -44,7 +44,7 @@ enum CustomTabBarItem: TabBarItemProtocol {
             NewPostView()
             .setupCustomTab(tab: CustomTabBarItem.newPost)
         case .profile:
-            ProfileView()
+            ProfileView(viewModel: ProfileViewModel(profile: NVUser(id: "", name: "", bio: "")))
             .setupCustomTab(tab: CustomTabBarItem.profile)
         }
     }
