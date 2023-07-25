@@ -44,7 +44,7 @@ struct StoriesActionSheet: View {
                         .clipShape(Circle())
                         .padding(.trailing, 300)
                         .padding(.top, 14)
-                    NavigationLink(destination: ProfileView()){
+                    NavigationLink(destination: ProfileView(viewModel: ProfileViewModel(profile: NVUser(id: "", name: "", bio: "")))){
                         Image("UserPhoto")
                             .resizable()
                             .frame(width: 66.0, height: 66)
